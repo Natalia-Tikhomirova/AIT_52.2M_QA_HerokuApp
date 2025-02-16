@@ -10,7 +10,6 @@ import java.lang.reflect.Method;
 
 public class TestBase {
     protected final ApplicationManager app = new ApplicationManager();
-
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeMethod

@@ -39,6 +39,7 @@ public class ApplicationManager {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
         }
+
         //driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
         driver.manage().window().setPosition(new Point(2500, 0));

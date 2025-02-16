@@ -77,7 +77,6 @@ public class BasePage {
             // Если alert не появился за 5 секунд, продолжаем выполнение
             System.out.println("No alert present. Proceeding with screenshot capture.");
         }
-
         // Capture screenshot
         File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File screenshot = new File("src/test_screenshots/screen-" + System.currentTimeMillis() + ".png");

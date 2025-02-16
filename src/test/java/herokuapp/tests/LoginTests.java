@@ -26,7 +26,6 @@ public class LoginTests extends TestBase {
                 .clickLoginButton()
                 .getSuccessMessage()  // сообщение об успешном входе
         ;
-
         Assert.assertTrue(successMessage.contains("You logged into a secure area!"));
    }
 
