@@ -22,13 +22,18 @@ public class LoginTests extends TestBase {
     @Test
     public void loginExistedUserPositiveTest() {
         String successMessage  = new LoginPage(app.driver, app.wait)
-                .enterPersonalData(UserData.INVALID_EMAIL, UserData.VALID_PASSWORD)
+                .enterPersonalData(UserData.VALID_EMAIL, UserData.VALID_PASSWORD)
                 .clickLoginButton()
                 .getSuccessMessage()  // сообщение об успешном входе
         ;
 
         Assert.assertTrue(successMessage.contains("You logged into a secure area!"));
    }
+
+    @Test
+    public void loginExistedUserNegativeTest() {
+        Assert.fail("Принудительный провал, чтобы проверить скриншот!");
+    }
 
 
    @Test(dataProvider = "loginDataProvider",dataProviderClass = DataProviders.class)

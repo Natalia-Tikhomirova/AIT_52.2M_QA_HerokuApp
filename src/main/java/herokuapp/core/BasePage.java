@@ -1,16 +1,16 @@
 package herokuapp.core;
 
-import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.time.Duration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class BasePage {
     public WebDriver driver;
@@ -73,15 +73,16 @@ public class BasePage {
             Alert alert = wait.until(ExpectedConditions.alertIsPresent());
             alert.accept();  // or alert.dismiss(); based on your use case
             System.out.println("Alert was present and accepted.");
-        } catch (NoAlertPresentException e) {
-            // No alert, proceed with screenshot capture
+        } catch (TimeoutException e) {
+            // Если alert не появился за 5 секунд, продолжаем выполнение
+            System.out.println("No alert present. Proceeding with screenshot capture.");
         }
 
         // Capture screenshot
         File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File screenshot = new File("src/test_screenshots/screen-" + System.currentTimeMillis() + ".png");
         try {
-            Files.copy(tmp, screenshot);
+            Files.copy(tmp.toPath(), screenshot.toPath());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
