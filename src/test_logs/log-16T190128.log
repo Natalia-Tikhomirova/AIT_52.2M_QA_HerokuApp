@@ -1,0 +1,28 @@
+19:01:29.715 [main] INFO  herokuapp.core.TestBase -- Test is started: [loginExistedUserDataProviderPositiveTest]
+19:01:30.766 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 133.0.6943.98 (resolved driver for Chrome 133)
+19:01:30.828 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\Natalia Tikhomirova\.cache\selenium\chromedriver\win64\133.0.6943.98\chromedriver.exe
+19:01:41.923 [main] INFO  herokuapp.core.TestBase -- Screenshot path: C:\AIT_TR_QA\HerokuApp\src\test_screenshots\screen-1739728901911.png
+19:01:41.925 [main] INFO  herokuapp.core.TestBase -- Test is PASSED: [loginExistedUserDataProviderPositiveTest]
+19:01:42.173 [main] INFO  herokuapp.core.TestBase -- Test is started: [loginExistedUserDataProviderPositiveTest]
+19:01:42.200 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 133.0.6943.98 (resolved driver for Chrome 133)
+19:01:42.218 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\Natalia Tikhomirova\.cache\selenium\chromedriver\win64\133.0.6943.98\chromedriver.exe
+19:01:52.280 [main] INFO  herokuapp.core.TestBase -- Screenshot path: C:\AIT_TR_QA\HerokuApp\src\test_screenshots\screen-1739728912279.png
+19:01:52.281 [main] INFO  herokuapp.core.TestBase -- Test is PASSED: [loginExistedUserDataProviderPositiveTest]
+19:01:52.676 [main] INFO  herokuapp.core.TestBase -- Test is started: [loginExistedUserNegativeTest]
+19:01:52.756 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 133.0.6943.98 (resolved driver for Chrome 133)
+19:01:52.815 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\Natalia Tikhomirova\.cache\selenium\chromedriver\win64\133.0.6943.98\chromedriver.exe
+19:02:02.565 [main] INFO  herokuapp.core.TestBase -- Screenshot path: C:\AIT_TR_QA\HerokuApp\src\test_screenshots\screen-1739728922562.png
+19:02:07.936 [main] ERROR herokuapp.core.TestBase -- Test is FAILED: [loginExistedUserNegativeTest], Screenshot: [C:\AIT_TR_QA\HerokuApp\src\test_screenshots\screen-1739728927932.png]
+19:02:08.291 [main] INFO  herokuapp.core.TestBase -- Test is started: [loginExistedUserPositiveTest]
+19:02:08.327 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 133.0.6943.98 (resolved driver for Chrome 133)
+19:02:08.350 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\Natalia Tikhomirova\.cache\selenium\chromedriver\win64\133.0.6943.98\chromedriver.exe
+19:02:18.594 [main] INFO  herokuapp.core.TestBase -- Screenshot path: C:\AIT_TR_QA\HerokuApp\src\test_screenshots\screen-1739728938593.png
+19:02:18.595 [main] INFO  herokuapp.core.TestBase -- Test is PASSED: [loginExistedUserPositiveTest]
+19:02:18.973 [main] INFO  herokuapp.core.TestBase -- Test is started: [loginNegativeDataProviderTest]
+19:02:18.999 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 133.0.6943.98 (resolved driver for Chrome 133)
+19:02:19.043 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\Natalia Tikhomirova\.cache\selenium\chromedriver\win64\133.0.6943.98\chromedriver.exe
+19:02:29.714 [main] INFO  herokuapp.core.TestBase -- Screenshot path: C:\AIT_TR_QA\HerokuApp\src\test_screenshots\screen-1739728949712.png
+19:02:29.714 [main] INFO  herokuapp.core.TestBase -- Test is PASSED: [loginNegativeDataProviderTest]
+19:02:30.198 [main] INFO  herokuapp.core.TestBase -- Test is started: [loginNegativeDataProviderTest]
+19:02:30.239 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 133.0.6943.98 (resolved driver for Chrome 133)
+19:02:30.301 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\Natalia Tikhomirova\.cache\selenium\chromedriver\win64\133.0.6943.98\chromedriver.exe
