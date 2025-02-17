@@ -62,6 +62,10 @@ public class BasePage {
         click(element);
     }
 
+    public void scrollTo(int y){
+        js.executeScript("window.scrollBy(0," + y + ")");
+    }
+
     public void hideAds() {
         js.executeScript("document.getElementById('adplus-anchor').style.display='none';");
         js.executeScript("document.querySelector('footer').style.display='none';");

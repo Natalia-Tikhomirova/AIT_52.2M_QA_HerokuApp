@@ -21,8 +21,18 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//a[text()='Nested Frames']")
     WebElement nestedFrames;
+
     public NestedFramesPage getNestedFramesPage() {
         click(nestedFrames);
         return new NestedFramesPage(driver, wait);
     }
+
+    @FindBy(css = "a[href='/windows']")
+    WebElement multipleWindow;
+
+    public MultipleWindowsPage getMultipleWindowsPage() {
+        click(multipleWindow);
+        return new MultipleWindowsPage(driver, wait);
+    }
+
 }
