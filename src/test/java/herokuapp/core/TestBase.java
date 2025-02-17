@@ -22,14 +22,8 @@ public class TestBase {
         app.init();
     }
 
-
     @AfterMethod(enabled = true)
     public void tearDown(Method method, ITestResult result) {
-
-
-        String screenshotPath = app.getHomePage().takeScreenshot();
-        logger.info("Screenshot path: " + screenshotPath);
-
 
         if (result.isSuccess()) {
             logger.info("Test is PASSED: [" + method.getName() + "]");

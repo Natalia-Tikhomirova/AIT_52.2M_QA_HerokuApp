@@ -34,6 +34,7 @@
 
     <!-- Локальное повышение уровня логов для класса org.testng.internal.Utils, чтобы не выводить INFO -->
     <logger name="org.testng.internal.Utils" level="WARN"/>
+    <logger name="io.github.bonigarcia.wdm.WebDriverManager" level="OFF"/>
 
     <!-- ! <root level="debug">&ndash;&gt; Меняем уровень логирования на INFO-->
     <root level="info">

@@ -67,16 +67,7 @@ public class BasePage {
     }
 
     public String takeScreenshot() {
-        // Check for alert before taking the screenshot
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Timeout for alert detection
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();  // or alert.dismiss(); based on your use case
-            System.out.println("Alert was present and accepted.");
-        } catch (TimeoutException e) {
-            // Если alert не появился за 5 секунд, продолжаем выполнение
-            System.out.println("No alert present. Proceeding with screenshot capture.");
-        }
+
         // Capture screenshot
         File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File screenshot = new File("src/test_screenshots/screen-" + System.currentTimeMillis() + ".png");
