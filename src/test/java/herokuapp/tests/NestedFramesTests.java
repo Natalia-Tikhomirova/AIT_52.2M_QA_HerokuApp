@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class NestedFramesTests extends TestBase {
-
     @BeforeMethod
     public void preCondition() {
         new HomePage(app.driver, app.wait).getNestedFramesPage();

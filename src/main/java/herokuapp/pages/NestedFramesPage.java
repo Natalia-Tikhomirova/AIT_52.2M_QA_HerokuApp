@@ -85,7 +85,6 @@ public class NestedFramesPage extends BasePage {
         return this;
     }
 
-
     // Возвращение в главное окно
     public NestedFramesPage switchToMainPage() {
         driver.switchTo().defaultContent();
