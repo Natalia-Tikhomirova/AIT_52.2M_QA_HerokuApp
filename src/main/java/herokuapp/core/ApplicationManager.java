@@ -33,6 +33,7 @@ public class ApplicationManager {
                 driver = new FirefoxDriver();
                 break;
             case "edge":
+                WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
             default: // Это резервный сценарий на случай, если значение browser не совпадает ни с одним из указанных случаев
