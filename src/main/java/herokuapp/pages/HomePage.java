@@ -18,4 +18,11 @@ public class HomePage extends BasePage {
         click(formAuthenticationPage);
         return new LoginPage(driver, wait);
     }
+
+    @FindBy(xpath = "//a[text()='Nested Frames']")
+    WebElement nestedFrames;
+    public NestedFramesPage getNestedFramesPage() {
+        click(nestedFrames);
+        return new NestedFramesPage(driver, wait);
+    }
 }

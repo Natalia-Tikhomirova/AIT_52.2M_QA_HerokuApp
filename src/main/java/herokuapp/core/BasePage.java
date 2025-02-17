@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -78,5 +79,15 @@ public class BasePage {
         }
         System.out.println("Screenshot saved to: [" + screenshot.getAbsolutePath() + "]");
         return screenshot.getAbsolutePath();
+    }
+
+    protected void shouldHaveText(WebElement element, String text, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(timeout));
+        try {
+            boolean isTextPresent = wait.until(ExpectedConditions.textToBePresentInElement(element,text));
+            Assert.assertTrue(isTextPresent,"Expected text: ["+ text +"], actual text in element: [" + element.getText().trim() + "] in element: [" + element + "]" );
+        } catch (TimeoutException e) {
+            throw new AssertionError("Text not found in element: [" + element +"], expected test: ["+ text +"] was text:[" + element.getText()+"]", e);
+        }
     }
 }
