@@ -37,14 +37,7 @@ public class NewWindowPage extends BasePage {
    WebElement sampleHeading;
     public NewWindowPage verifyNewWindowTitle(String text) {
         shouldHaveText(sampleHeading, text, 5000);
-        return this;
-    }
-
-    public NewWindowPage closeNewWindowAndReturn() {
-        List<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.close();
-        driver.switchTo().window(windows.get(0));
-        System.out.println("Closed new window and returned to main page.");
         return this;
     }
 }

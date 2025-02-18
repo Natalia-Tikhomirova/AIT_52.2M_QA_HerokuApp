@@ -19,7 +19,6 @@ public class MultipleWindowsPageTest extends TestBase {
                 .openNewWindow()
                 .switchToNewWindow()
                 .verifyNewWindowTitle("New Window")
-                .closeNewWindowAndReturn()
         ;
     }
 }
