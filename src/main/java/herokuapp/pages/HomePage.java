@@ -35,4 +35,22 @@ public class HomePage extends BasePage {
         return new MultipleWindowsPage(driver, wait);
     }
 
+
+    @FindBy(css = "div#content>ul>li:nth-of-type(11)>a")
+    WebElement dropdown;
+
+    public DropdownPage getDropdownPage() {
+        click(dropdown);
+        return new DropdownPage(driver, wait);
+    }
+
+    @FindBy(id = "dropdown")
+    WebElement dropdownPage;
+
+    public DropdownPage dropdownPage() {
+        click(dropdownPage);
+        return new DropdownPage(driver, wait);
+    }
+
+
 }
