@@ -15,16 +15,27 @@ public class DropdownTests extends TestBase {
 
     @Test
     public void selectDropdownListPositiveTest() {
+        String option = "Option 1";
         new DropdownPage(app.driver, app.wait)
-                .selectDropdownList("Option 1")
+                .selectDropdownList(option)
                 .selectDropdownList("Option 2")
+                .verifyDropdownList(option)
                 ;
+    }
+    @Test
+    public void selectDropdownListPositive2Test() {
+        String option = "Option 1";
+        new DropdownPage(app.driver, app.wait)
+                .selectDropdownList(option)
+                .verifyDropdownListHashSet(option)
+        ;
     }
 
     @Test
     public void selectDropdownListNegativeTest() {
         new DropdownPage(app.driver, app.wait)
                 .selectInvalidOption("Option 3")
+                .verifyDropdownList("Please select an option")
         ;
     }
 }
