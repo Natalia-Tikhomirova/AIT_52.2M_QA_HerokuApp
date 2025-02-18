@@ -33,7 +33,6 @@ public class DropdownPage extends BasePage {
     }
 
     public DropdownPage selectInvalidOption(String option) {
-
         try {
             Select select = new Select(dropdown);
             select.selectByVisibleText(option);
@@ -44,7 +43,6 @@ public class DropdownPage extends BasePage {
     }
 
     public DropdownPage verifyDropdownList(String option) {
-
         shouldHaveText(dropdown, option, 5000);
         return this;
     }
