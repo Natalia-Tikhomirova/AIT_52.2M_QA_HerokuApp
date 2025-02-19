@@ -53,4 +53,12 @@ public class HomePage extends BasePage {
     }
 
 
+
+    @FindBy(xpath = "(//div[@id='content']//a)[2]")
+    WebElement AddRemoveElements;
+
+    public AddRemoveElementsPage getAddRemoveElementsPage() {
+        click(AddRemoveElements);
+        return new AddRemoveElementsPage(driver, wait);
+    }
 }
