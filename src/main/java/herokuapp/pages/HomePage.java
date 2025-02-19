@@ -61,4 +61,12 @@ public class HomePage extends BasePage {
         click(AddRemoveElements);
         return new AddRemoveElementsPage(driver, wait);
     }
+
+    @FindBy(css = "ul>li:nth-of-type(25)>a")
+    WebElement hovers;
+
+    public HoversPage getHoversPage() {
+        click(hovers);
+        return new HoversPage(driver, wait);
+    }
 }
