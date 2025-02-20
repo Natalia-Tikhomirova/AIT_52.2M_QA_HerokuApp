@@ -69,4 +69,11 @@ public class HomePage extends BasePage {
         click(hovers);
         return new HoversPage(driver, wait);
     }
+
+    @FindBy(css = "li:nth-of-type(24)>a")
+    WebElement slider;
+    public HorizontalSliderPage getHorizontalSliderPage() {
+        click(slider);
+        return new HorizontalSliderPage(driver, wait);
+    }
 }
