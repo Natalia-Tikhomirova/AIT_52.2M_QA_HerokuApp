@@ -1,3 +1,0 @@
-18:59:35.357 [main] INFO  herokuapp.core.TestBase -- Test is started: [loginExistedUserDataProviderPositiveTest]
-18:59:37.559 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 133.0.6943.98 (resolved driver for Chrome 133)
-18:59:37.613 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\Natalia Tikhomirova\.cache\selenium\chromedriver\win64\133.0.6943.98\chromedriver.exe

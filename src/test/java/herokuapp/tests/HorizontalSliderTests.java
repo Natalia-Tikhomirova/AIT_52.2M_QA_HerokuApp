@@ -14,6 +14,19 @@ public class HorizontalSliderTests extends TestBase {
     }
 
     @Test
+    public void horizontalSliderPositiveTest() {
+        Float setSlider = 4.5F;
+        new HorizontalSliderPage(app.driver, app.wait)
+                .moveSlider(setSlider)
+                .verifySliderValue(setSlider)
+        ;
+
+    }
+
+
+
+
+    @Test
     public void horizontalSliderPositiveTestWithActions() {
         double setSlider = 0.0;
         new HorizontalSliderPage(app.driver, app.wait)

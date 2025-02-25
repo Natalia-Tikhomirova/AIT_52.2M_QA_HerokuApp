@@ -7,6 +7,7 @@ import herokuapp.pages.LoginPage;
 import herokuapp.utils.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase {
@@ -28,10 +29,10 @@ public class LoginTests extends TestBase {
         Assert.assertTrue(successMessage.contains("You logged into a secure area!"));
    }
 
-    @Test
-    public void loginExistedUserNegativeTest() {
-        Assert.fail("Принудительный провал, чтобы проверить скриншот!");
-    }
+//    @Test
+//    public void loginExistedUserNegativeTest() {
+//        Assert.fail("Принудительный провал, чтобы проверить скриншот!");
+//    }
 
 
    @Test(dataProvider = "loginDataProvider",dataProviderClass = DataProviders.class)
@@ -46,6 +47,7 @@ public class LoginTests extends TestBase {
     }
 
    @Test
+   @Parameters({"invalidUser","invalidPassword"})
     public void loginNegativeTest(){
         String errorMessage = new LoginPage(app.driver, app.wait)
                 .enterPersonalData(UserData.INVALID_EMAIL,UserData.INVALID_PASSWORD)
