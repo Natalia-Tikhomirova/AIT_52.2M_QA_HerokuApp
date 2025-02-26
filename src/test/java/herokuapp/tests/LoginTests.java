@@ -46,17 +46,18 @@ public class LoginTests extends TestBase {
         Assert.assertTrue(successMessage.contains("You logged into a secure area!"));
     }
 
-   @Test
-   @Parameters({"invalidUser","invalidPassword"})
-    public void loginNegativeTest(){
+    @Test
+    @Parameters({"invalidEmail", "invalidPassword"})
+    public void loginNegativeParameterTest(String invalidEmail, String invalidPassword) {
         String errorMessage = new LoginPage(app.driver, app.wait)
-                .enterPersonalData(UserData.INVALID_EMAIL,UserData.INVALID_PASSWORD)
+                .enterPersonalData(invalidEmail, invalidPassword)
                 .clickLoginButton()
-                .getErrorMessage()
-        ;
+                .getErrorMessage();
 
-        Assert.assertTrue(errorMessage.contains("Your username is invalid!"));
-   }
+        Assert.assertTrue(errorMessage.contains("Your username is invalid!"),
+                "Expected error message not found!");
+    }
+
 
    @Test(dataProvider = "loginNegativeDataProvider",dataProviderClass = DataProviders.class)
    public void loginNegativeDataProviderTest(String invalidEmail, String invalidPassword){

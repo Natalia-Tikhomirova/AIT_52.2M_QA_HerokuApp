@@ -2,8 +2,6 @@
 
 <suite name="login" verbose="1">
     <test name="LoginTests">
-        <parameter name="invalidEmail" value="invalidUser"/>
-        <parameter name="invalidPassword" value="invalidPassword"/>
 
         <classes>
             <class name="herokuapp.tests.LoginTests">
@@ -11,6 +9,9 @@
                     <include name=".*Parameter.*"/>
                 </methods>
             </class>
+            <parameter name="invalidEmail" value="invalidUser"/>
+            <parameter name="invalidPassword" value="invalidPassword"/>
         </classes>
     </test>
 </suite>
+
