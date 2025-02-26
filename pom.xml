@@ -42,12 +42,7 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.11.0</version>
-            <scope>compile</scope>
-        </dependency>
+
     </dependencies>
 
     <build>
@@ -67,12 +62,12 @@
 
     <profiles>
         <profile>
-            <id>login</id>
+            <id>testng-login</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suiteXmlFile>src/test/resources/login.xml</suiteXmlFile>
+                <suiteXmlFile>src/test/resources/testng-login.xml</suiteXmlFile>
             </properties>
         </profile>
     </profiles>
